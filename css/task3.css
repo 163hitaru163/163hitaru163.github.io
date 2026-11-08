@@ -1,0 +1,89 @@
+/* ВНЕШНЯЯ таблица стилей для задания 3 «Таблицы в HTML».
+   Подключается тегом <link rel="stylesheet" href="css/task3.css"> */
+
+/* ---------- id ---------- */
+#doc {
+  width: 680px;
+  margin: 0 auto;
+  padding: 30px 40px 40px;
+  background: #fff;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+  color: #000;
+}
+
+#main-title {
+  text-align: center;
+  color: #1a1aff;
+  font-size: 36px;
+  font-weight: bold;
+  margin: 0 0 24px;
+}
+
+#subtitle {
+  color: #800080;
+  font-size: 26px;
+  font-weight: bold;
+  margin: 34px 0 26px;
+  border: none;
+  padding: 0;
+}
+
+/* ---------- классы ---------- */
+.spaced { letter-spacing: 0.35em; }
+.math .spaced { letter-spacing: 0.25em; }          /* разреженный текст */
+
+.sans   { font-family: Verdana, Tahoma, Arial, sans-serif; }
+.arial  { font-family: Arial, Helvetica, sans-serif; }
+.corsiva { font-family: "Monotype Corsiva", "Brush Script MT", "Segoe Script", cursive; }
+
+.bg-cyan    { background-color: #00ffff; }
+.bg-yellow  { background-color: #ffff00; }
+.bg-gray    { background-color: #c0c0c0; }
+.bg-magenta { background-color: #ff00ff; }
+.bg-pink    { background-color: #ff99cc; }
+.bg-black   { background-color: #000; color: #fff; }
+
+.underline { text-decoration: underline; }
+.strike    { text-decoration: line-through; }
+
+.blue { color: #1a1aff; }
+.red  { color: #ff0000; }
+
+.right  { text-align: right; }
+.center { text-align: center; }
+.left   { text-align: left; }
+
+/* блоки абзацев */
+.para { margin: 0 0 26px; line-height: 1.45; }
+.para-indent { text-indent: 2.2em; }
+
+/* выделения внутри абзацев */
+.accent-word { font-weight: bold; font-style: italic; }
+.tag-text    { font-family: Verdana, Tahoma, Arial, sans-serif; }
+
+/* ---------- таблица ---------- */
+.table-label { text-align: right; font-weight: bold; margin: 0 0 30px; }
+
+.math {
+  width: 100%;
+  border: 3px double #000;
+  border-collapse: separate;
+  border-spacing: 2px;
+}
+.math caption {
+  color: #1a1aff;
+  font-size: 26px;
+  font-weight: bold;
+  font-style: italic;
+  text-decoration: line-through;
+  padding-bottom: 24px;
+}
+.math th, .math td {
+  border: 2px solid #000;
+  padding: 1px 6px;
+  width: 20%;
+  white-space: nowrap;
+}
+.math th { font-size: 22px; }
+.math td { font-size: 19px; font-weight: bold; }

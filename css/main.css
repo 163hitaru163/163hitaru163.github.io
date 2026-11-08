@@ -1,0 +1,91 @@
+/* Общие стили сайта (страницы: о студенте, таблицы, формы) */
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.55;
+  color: #1f2933;
+  background: #eef2f7;
+}
+
+a { color: #1565c0; }
+a:hover { color: #0d47a1; }
+
+/* ---------- шапка и меню ---------- */
+.site-header {
+  background: linear-gradient(135deg, #0d3b66, #1565c0);
+  color: #fff;
+  padding: 18px 0;
+}
+.site-header .wrap { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+.logo { font-weight: 700; font-size: 20px; color: #fff; text-decoration: none; }
+.menu { list-style: none; margin: 0; padding: 0; display: flex; gap: 6px; flex-wrap: wrap; }
+.menu a {
+  display: block; padding: 6px 14px; border-radius: 18px;
+  color: #fff; text-decoration: none; font-size: 15px;
+}
+.menu a:hover, .menu a.active { background: rgba(255, 255, 255, .2); }
+
+.wrap { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+
+main.wrap { padding-top: 28px; padding-bottom: 40px; }
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(15, 40, 80, .08);
+  padding: 24px 28px;
+  margin-bottom: 22px;
+}
+.card h2 { margin-top: 0; color: #0d3b66; border-bottom: 2px solid #e3e9f2; padding-bottom: 8px; }
+
+/* ---------- страница о студенте ---------- */
+.profile { display: flex; gap: 28px; align-items: center; flex-wrap: wrap; }
+.profile > div { flex: 1; min-width: 280px; }
+.profile figure { margin: 0; text-align: center; }
+.profile img {
+  width: 200px; height: 200px; object-fit: cover;
+  border-radius: 50%; border: 5px solid #e3e9f2;
+}
+.profile figcaption { font-size: 13px; color: #6b7785; margin-top: 6px; }
+.profile h1 { margin: 0 0 6px; font-size: 30px; color: #0d3b66; }
+.profile .subtitle { margin: 0 0 12px; color: #52606d; }
+
+.contacts { margin: 0; padding: 0; list-style: none; }
+.contacts li { margin: 4px 0; }
+
+.facts { width: 100%; border-collapse: collapse; margin-top: 10px; }
+.facts th, .facts td { border: 1px solid #d5dde8; padding: 8px 12px; text-align: left; }
+.facts th { background: #f1f5fb; width: 35%; }
+
+dl.timeline dt { font-weight: 700; color: #1565c0; }
+dl.timeline dd { margin: 0 0 10px 20px; }
+
+blockquote {
+  margin: 16px 0; padding: 12px 18px;
+  border-left: 4px solid #1565c0; background: #f1f5fb; font-style: italic;
+}
+
+code, kbd { font-family: Consolas, "Courier New", monospace; font-size: 14px; }
+kbd { border: 1px solid #c3ccd8; border-bottom-width: 2px; border-radius: 4px; padding: 0 5px; background: #f8fafc; }
+pre { background: #1e2a38; color: #d8e3f0; padding: 14px 16px; border-radius: 8px; overflow-x: auto; }
+
+mark { background: #fff3a6; }
+
+details { margin-top: 10px; }
+summary { cursor: pointer; font-weight: 600; color: #0d3b66; }
+
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+@media (max-width: 760px) { .two-col { grid-template-columns: 1fr; } }
+
+/* ---------- подвал ---------- */
+.site-footer { background: #0d3b66; color: #c9d6e6; padding: 18px 0; font-size: 14px; }
+.site-footer a { color: #fff; }
+.site-footer address { font-style: normal; }
+
+/* ---------- страницы заданий ---------- */
+.task-title { margin: 0 0 6px; }
+.task-note { color: #52606d; margin-top: 0; }
+.demo { background: #fff; padding: 20px; border: 1px dashed #c3ccd8; border-radius: 8px; overflow-x: auto; }
