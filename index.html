@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Персональная страница студента НВГУ Раджабова Рагима, группа 3402">
+  <meta name="author" content="Раджабов Рагим Захарович">
+  <title>Раджабов Рагим — страница студента НВГУ</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+  <!-- Шапка сайта с навигацией -->
+  <header class="site-header">
+    <div class="wrap">
+      <a class="logo" href="index.html">Рагим Раджабов</a>
+      <nav>
+        <ul class="menu">
+          <li><a class="active" href="index.html">Обо мне</a></li>
+          <li><a href="tables.html">Таблицы</a></li>
+          <li><a href="forms.html">Формы</a></li>
+          <li><a href="css.html">CSS</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+
+    <!-- 1. Чей сайт и фото студента -->
+    <section class="card" id="about">
+      <div class="profile">
+        <figure>
+          <img src="img/photo.svg" alt="Фото студента Раджабова Рагима" width="200" height="200">
+          <figcaption>Это я</figcaption>
+        </figure>
+        <div>
+          <h1>Раджабов Рагим Захарович</h1>
+          <p class="subtitle">Студент <abbr title="Нижневартовский государственный университет">НВГУ</abbr>, <strong>3 курс</strong>, группа <b>3402</b></p>
+          <p>Привет! Это мой <em>персональный сайт</em>, сделанный в рамках лабораторной работы №2 по дисциплине <q>Web-программирование</q>.</p>
+
+          <!-- 2. Электронная почта и 3. ссылка на сайт вуза -->
+          <ul class="contacts">
+            <li>&#9993; E-mail: <a href="mailto:xdtss6965@gmail.com">xdtss6965@gmail.com</a></li>
+            <li>&#127979; Сайт вуза: <a href="https://nvsu.ru" target="_blank" rel="noopener">nvsu.ru</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <div class="two-col">
+
+      <!-- 4. Мой ВУЗ -->
+      <article class="card" id="university">
+        <h2>Мой ВУЗ — НВГУ</h2>
+        <p><dfn>Нижневартовский государственный университет</dfn> — <mark>первый вуз Югры</mark>, расположенный в городе Нижневартовске (<abbr title="Ханты-Мансийский автономный округ">ХМАО</abbr>&nbsp;– Югра).</p>
+        <dl class="timeline">
+          <dt><time datetime="1988-07-12">12 июля 1988</time></dt>
+          <dd>Открыт филиал Тобольского педагогического института им.&nbsp;Д.&nbsp;И.&nbsp;Менделеева: 3 факультета, 25 преподавателей и 158 студентов.</dd>
+          <dt><time datetime="2005">2005</time></dt>
+          <dd>Вуз стал Нижневартовским государственным гуманитарным университетом.</dd>
+          <dt><time datetime="2013">2013</time></dt>
+          <dd>Получил современное название — Нижневартовский государственный университет.</dd>
+        </dl>
+        <blockquote>
+          <p>Prospero populi educatione</p>
+          <footer>— девиз университета (<cite>лат.</cite>)</footer>
+        </blockquote>
+      </article>
+
+      <!-- 5. Моя группа -->
+      <article class="card" id="group">
+        <h2>Моя группа</h2>
+        <table class="facts">
+          <caption hidden>Информация об учебной группе</caption>
+          <tbody>
+            <tr><th scope="row">Группа</th><td>3402</td></tr>
+            <tr><th scope="row">Курс</th><td>III</td></tr>
+            <tr><th scope="row">Факультет</th><td>Информационных технологий и математики (ФИТиМ)</td></tr>
+            <tr><th scope="row">Направление</th><td>09.03.01 «Информатика и вычислительная техника»</td></tr>
+            <tr><th scope="row">Форма обучения</th><td>Очная</td></tr>
+          </tbody>
+        </table>
+      </article>
+
+    </div>
+
+    <!-- 6. Моя будущая профессия -->
+    <section class="card" id="profession">
+      <h2>Моя будущая профессия</h2>
+      <p>Я учусь, чтобы стать <strong>программистом</strong> — разработчиком веб-приложений. Мне нравится, что результат работы сразу виден: написал код, обновил страницу — и всё работает.</p>
+      <h3>Что уже умею или изучаю</h3>
+      <ol>
+        <li>Вёрстка на <code>HTML</code> и <code>CSS</code></li>
+        <li>Система контроля версий <code>Git</code></li>
+        <li>Программирование на <code>Java</code></li>
+        <li>Базы данных и язык <code>SQL</code> (PostgreSQL)</li>
+      </ol>
+      <p>Простейшая веб-страница выглядит так:</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Hello, World!&lt;/h1&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+      <p>Сохранить файл в редакторе: <kbd>Ctrl</kbd> + <kbd>S</kbd>, обновить страницу в браузере: <kbd>F5</kbd>.</p>
+    </section>
+
+    <!-- 7. Мои увлечения -->
+    <section class="card" id="hobby">
+      <h2>Мои увлечения</h2>
+      <ul>
+        <li><strong>Фитнес</strong> — занимаюсь в тренажёрном зале, слежу за питанием и прогрессом.</li>
+        <li><strong>Компьютерные технологии</strong> — разбираюсь в новых языках и инструментах разработки.</li>
+      </ul>
+      <p>Формула прогресса в зале: <i>результат</i> = тренировки<sup>2</sup> &times; режим, а вода — это H<sub>2</sub>O, и её надо пить много.</p>
+    </section>
+
+    <!-- 8. Любая другая информация -->
+    <section class="card" id="other">
+      <h2>Другая информация</h2>
+      <p>Город: <b>Нижневартовск</b>. Зимой здесь бывает <del>&minus;30&nbsp;°C</del> <ins>&minus;45&nbsp;°C</ins>, так что лучшее место — за компьютером.</p>
+      <details>
+        <summary>Почему я выбрал IT?</summary>
+        <p>Потому что это профессия, которая позволяет создавать полезные вещи и работать из любой точки мира.</p>
+      </details>
+      <hr>
+      <p><small>Страница создана для учебных целей. Последнее обновление: <time datetime="2026-11-08">8 ноября 2026 г.</time></small></p>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <address>
+        &copy; 2026 Раджабов Рагим, гр. 3402, НВГУ<br>
+        Связаться: <a href="mailto:xdtss6965@gmail.com">xdtss6965@gmail.com</a>
+      </address>
+    </div>
+  </footer>
+
+</body>
+</html>

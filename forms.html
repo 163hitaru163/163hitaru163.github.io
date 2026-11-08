@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Формы — задание 2.3</title>
+  <link rel="stylesheet" href="css/main.css">
+  <style>
+    /* ---------- Форма А: ЗАО Птицефабрика №1 ---------- */
+    .form-a { font-family: "Times New Roman", Times, serif; font-size: 15px; color: #000; }
+    .form-a h1 { font-size: 32px; margin: 0 0 18px; }
+    .form-a table { border-collapse: collapse; margin-left: 110px; }
+    .form-a th { text-align: right; font-weight: normal; padding: 3px 4px 3px 0; white-space: nowrap; }
+    .form-a td { padding: 3px 0; }
+    .form-a input[type="text"], .form-a input[type="password"] { width: 200px; }
+    .form-a input.wide  { width: 380px; }
+    .form-a input.short { width: 80px; }
+    .form-a textarea { width: 485px; height: 48px; }
+    .form-a .buttons button { width: 90px; padding: 3px 0; }
+
+    /* ---------- Форма Б: регистрация сайта ---------- */
+    .form-b-window {
+      width: 620px; border: 2px solid #3b6fc4; border-radius: 6px; overflow: hidden;
+      font-family: Arial, Helvetica, sans-serif; font-size: 13px; color: #000; background: #fff;
+    }
+    .form-b-window .bar {
+      background: linear-gradient(#4f8be0, #2c63bf); color: #fff; padding: 6px 10px; font-size: 16px;
+    }
+    .form-b { padding: 8px 10px 12px; }
+    .form-b h1 { font-family: "Times New Roman", Times, serif; font-weight: normal; font-size: 28px; margin: 0; }
+    .form-b label { display: block; margin-top: 2px; }
+    .form-b input[type="text"], .form-b input[type="password"], .form-b input[type="url"] { width: 125px; }
+    .form-b textarea { width: 425px; height: 118px; }
+    .form-b .actions { margin-top: 14px; }
+    .form-b .actions button {
+      color: #0060b6; font-weight: bold; font-size: 12px;
+      border: 1px solid #a9b8c8; background: linear-gradient(#ffffff, #dde4ec); padding: 2px 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="logo" href="index.html">Рагим Раджабов</a>
+      <nav>
+        <ul class="menu">
+          <li><a href="index.html">Обо мне</a></li>
+          <li><a href="tables.html">Таблицы</a></li>
+          <li><a class="active" href="forms.html">Формы</a></li>
+          <li><a href="css.html">CSS</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+
+    <!-- ===================== Форма А ===================== -->
+    <section class="card">
+      <h2 class="task-title">Задание 2.3 А. Форма заказа</h2>
+      <p class="task-note">Поля формы выровнены с помощью таблицы.</p>
+      <div class="demo form-a">
+        <h1>ЗАО Птицефабрика №1</h1>
+        <form action="#" method="post" name="order">
+          <table>
+            <tr>
+              <th><label for="surname">Фамилия</label></th>
+              <td><input type="text" id="surname" name="surname"></td>
+            </tr>
+            <tr>
+              <th><label for="initials">Инициалы</label></th>
+              <td><input type="text" id="initials" name="initials" maxlength="4"></td>
+            </tr>
+            <tr>
+              <th><label for="pass-a">Пароль</label></th>
+              <td><input type="password" id="pass-a" name="password"></td>
+            </tr>
+            <tr>
+              <th><label for="address">Адрес получателя</label></th>
+              <td><input type="text" id="address" name="address" class="wide"></td>
+            </tr>
+            <tr>
+              <th><label for="amount">Количество</label></th>
+              <td><input type="text" id="amount" name="amount" class="short"></td>
+            </tr>
+            <tr>
+              <th>Тип</th>
+              <td>
+                <select name="kind" aria-label="Вид яиц">
+                  <option selected>Куриные</option>
+                  <option>Перепелиные</option>
+                  <option>Утиные</option>
+                </select>
+                <select name="grade" aria-label="Категория">
+                  <option selected>Отборные</option>
+                  <option>Высшая категория</option>
+                  <option>Первая категория</option>
+                  <option>Вторая категория</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <th>Доставка</th>
+              <td>
+                <label><input type="radio" name="delivery" value="post"> Почтой</label>
+                <label><input type="radio" name="delivery" value="electronic"> Электронно</label>
+                <label><input type="radio" name="delivery" value="courier"> Курьером</label>
+              </td>
+            </tr>
+            <tr>
+              <th><label for="invoice">Требуется накладная</label></th>
+              <td><input type="checkbox" id="invoice" name="invoice"></td>
+            </tr>
+            <tr>
+              <th><label for="info">Дополнительная информация</label></th>
+              <td><textarea id="info" name="info"></textarea></td>
+            </tr>
+            <tr class="buttons">
+              <th></th>
+              <td style="padding-left:0">
+                <button type="submit">Заказать</button>
+                <button type="reset">Отменить</button>
+              </td>
+            </tr>
+          </table>
+        </form>
+      </div>
+    </section>
+
+    <!-- ===================== Форма Б ===================== -->
+    <section class="card">
+      <h2 class="task-title">Задание 2.3 Б. Форма регистрации сайта</h2>
+      <p class="task-note">Используются поля разных типов: текст, пароль, адрес, многострочное поле, список, выбор файла.</p>
+      <div class="demo">
+        <div class="form-b-window">
+          <div class="bar">&#127760; Пример</div>
+          <form class="form-b" action="#" method="post" enctype="multipart/form-data" name="register">
+            <h1>Пример формы регистрации сайта</h1>
+
+            <label for="login">Логин:</label>
+            <input type="text" id="login" name="login">
+
+            <label for="pass-b">Пароль:</label>
+            <input type="password" id="pass-b" name="password" value="123456">
+
+            <label for="url">URL-адрес сайта:</label>
+            <input type="text" id="url" name="url" value="http://">
+
+            <label for="sitename">Название сайта:</label>
+            <input type="text" id="sitename" name="sitename">
+
+            <label for="descr">Описание сайта:</label>
+            <textarea id="descr" name="description"></textarea>
+
+            <label for="theme">Тема сайта:</label>
+            <select id="theme" name="theme">
+              <option selected>Тема не выбрана</option>
+              <option>Образование</option>
+              <option>Новости</option>
+              <option>Развлечения</option>
+              <option>Спорт</option>
+              <option>Технологии</option>
+            </select>
+
+            <label for="banner">Баннер 88x31:</label>
+            <input type="file" id="banner" name="banner" accept="image/*">
+
+            <div class="actions">
+              <button type="reset">Очистить</button>
+              <button type="submit">Отправить</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">&copy; 2026 Раджабов Рагим, гр. 3402, НВГУ</div>
+  </footer>
+
+</body>
+</html>

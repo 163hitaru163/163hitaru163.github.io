@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Таблицы в HTML — задание 3 (CSS)</title>
+
+  <!-- Способ 3: ВНЕШНЯЯ таблица стилей (отдельный файл) -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/task3.css">
+
+  <!-- Способ 2: ВНУТРЕННЯЯ таблица стилей (тег style) -->
+  <style>
+    #doc h2 + p { margin-top: 0; }
+
+    /* фон только под строками текста абзаца */
+    .mark-lines {
+      box-decoration-break: clone;
+      -webkit-box-decoration-break: clone;
+      padding: 1px 0;
+    }
+
+    .p-gray-block {
+      display: inline;
+      background-color: #c0c0c0;
+      line-height: 1.6;
+    }
+
+    .descr {
+      font-family: Verdana, Tahoma, Arial, sans-serif;
+      font-size: 26px;
+      font-weight: 900;
+      font-style: italic;
+      padding: 0 2px;
+    }
+
+    a.term { color: #1a1aff; }
+
+    .math .h1 { text-align: left; font-style: italic; }
+    .math .h3 { color: #1a1aff; }
+    .math .h4 { font-style: italic; font-weight: normal; }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="logo" href="index.html">Рагим Раджабов</a>
+      <nav>
+        <ul class="menu">
+          <li><a href="index.html">Обо мне</a></li>
+          <li><a href="tables.html">Таблицы</a></li>
+          <li><a href="forms.html">Формы</a></li>
+          <li><a class="active" href="css.html">CSS</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="card" style="padding: 0; overflow: hidden;">
+      <div id="doc">
+
+        <h1 id="main-title"><span class="spaced">Таблицы</span> в HTML</h1>
+
+        <p class="para para-indent">
+          <span class="bg-cyan mark-lines">Одним из наиболее мощных и широко применяемых в
+          <!-- Способ 1: ВСТРОЕННЫЙ стиль (атрибут style) -->
+          <b class="arial" style="font-size: 24px;">HTML</b> средств являются
+          <i class="sans" style="font-size: 27px;">таблицы</i>.</span>
+        </p>
+
+        <p class="para right">
+          <span class="bg-yellow underline mark-lines">Понятие табличного представления данных не нуждается в
+          дополнительном пояснении.</span>
+          <span class="bg-gray sans mark-lines" style="font-size: 17px; color: #222;">В HTML таблицы используются не только
+          традиционно, как метод представления данных, но и как средство форматирования Web-страниц.</span>
+        </p>
+
+        <h2 id="subtitle">Создание простейших HTML-таблиц</h2>
+
+        <p class="para sans" style="font-size: 17px;">
+          <span class="descr bg-magenta">Описание</span>
+          <i class="underline" style="font-size: 21px;">таблиц</i>
+          <span class="underline" style="font-size: 19px;">должно</span>
+          располагаться внутри раздела документа &lt;BODY&gt;.
+        </p>
+
+        <p class="para center sans" style="font-size: 20px;">
+          Каждая <a class="term" href="#math-table">таблица</a> должна
+          <span style="font-size: 25px;">начинаться</span> тэгом &lt;TABLE&gt; и завершаться
+          тэгом &lt;/TABLE&gt;.
+        </p>
+
+        <p class="para center">
+          <span class="p-gray-block mark-lines">
+            <span class="accent-word blue">Каждая</span> строка начинается тэгом &lt;TR&gt; (Table Row) и завершается тэгом
+            &lt;/TR&gt;. <span class="accent-word red" style="font-size: 21px;">Отдельная</span> ячейка в строке обрамляется парой тегов &lt;TD&gt; и &lt;/TD&gt;
+            (Table Data) или &lt;TH&gt; и &lt;/TH&gt; (Table Header)
+          </span>
+        </p>
+
+        <p class="table-label">Таблица 1</p>
+
+        <table class="math" id="math-table">
+          <caption class="corsiva">Математические выражения</caption>
+          <tr>
+            <th class="h1 corsiva">Поле1</th>
+            <th class="bg-black arial center">Поле 2</th>
+            <th class="h3 bg-cyan arial right">Поле 3</th>
+            <th class="h4 bg-pink arial left underline">Поле 4</th>
+            <th class="bg-yellow spaced center" style="font-family: 'Times New Roman', serif;">Поле 5</th>
+          </tr>
+          <tr>
+            <td class="blue underline left">(a+b)<sup>2</sup></td>
+            <td class="center">a<sup>2</sup>-b<sup>2</sup></td>
+            <td class="blue right">(a-b)<sup>3</sup></td>
+            <td class="left">A<sub>1</sub>+A<sub>2</sub>+&hellip;A<sub>i</sub></td>
+            <td class="blue center" style="font-weight: normal;">y=x<sup>2</sup></td>
+          </tr>
+        </table>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">&copy; 2026 Раджабов Рагим, гр. 3402, НВГУ</div>
+  </footer>
+
+</body>
+</html>

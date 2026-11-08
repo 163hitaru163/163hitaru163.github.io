@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Таблицы — задание 2.2</title>
+  <link rel="stylesheet" href="css/main.css">
+  <style>
+    /* ---------- Таблица А ---------- */
+    .table-a {
+      border-collapse: collapse;
+      width: 600px;
+    }
+    .table-a td {
+      height: 100px;
+      border-left: 1px solid #000;
+      border-right: 1px solid #000;
+      border-top: 3px solid #000;
+      border-bottom: 3px solid #000;
+    }
+
+    /* ---------- Таблица Б ---------- */
+    .table-b {
+      border-collapse: collapse;
+    }
+    .table-b td {
+      width: 68px;
+      height: 68px;
+      border: 1px solid #000;
+      padding: 0;
+    }
+    .table-b .aqua   { background: #00ffcc; }
+    .table-b .cream  { background: #ffffcc; }
+    .table-b .red    { background: #ff0000; }
+    .table-b .blue   { background: #0000ff; }
+    .table-b .green  { background: #00ff00; }
+    .table-b .yellow { background: #ffff00; }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="logo" href="index.html">Рагим Раджабов</a>
+      <nav>
+        <ul class="menu">
+          <li><a href="index.html">Обо мне</a></li>
+          <li><a class="active" href="tables.html">Таблицы</a></li>
+          <li><a href="forms.html">Формы</a></li>
+          <li><a href="css.html">CSS</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+
+    <section class="card">
+      <h2 class="task-title">Задание 2.2 А. Таблица с объединением ячеек</h2>
+      <p class="task-note">Объединение ячеек выполнено атрибутами <code>colspan</code> и <code>rowspan</code>.</p>
+      <div class="demo">
+        <table class="table-a">
+          <tr>
+            <td colspan="5"></td>
+          </tr>
+          <tr>
+            <td rowspan="3"></td>
+            <td></td>
+            <td rowspan="3"></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td rowspan="3"></td>
+            <td rowspan="3"></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </table>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2 class="task-title">Задание 2.2 Б. Цветная таблица «Квадраты»</h2>
+      <p class="task-note">Таблица 8&times;8 ячеек, вложенные «рамки» получены объединением ячеек.</p>
+      <div class="demo">
+        <table class="table-b">
+          <tr>
+            <td colspan="8" class="aqua"></td>
+          </tr>
+          <tr>
+            <td rowspan="6" class="cream"></td>
+            <td colspan="6" class="aqua"></td>
+            <td rowspan="6" class="cream"></td>
+          </tr>
+          <tr>
+            <td rowspan="4" class="cream"></td>
+            <td colspan="4" class="aqua"></td>
+            <td rowspan="4" class="cream"></td>
+          </tr>
+          <tr>
+            <td rowspan="2" class="cream"></td>
+            <td class="red"></td>
+            <td class="blue"></td>
+            <td rowspan="2" class="cream"></td>
+          </tr>
+          <tr>
+            <td class="green"></td>
+            <td class="yellow"></td>
+          </tr>
+          <tr>
+            <td colspan="4" class="aqua"></td>
+          </tr>
+          <tr>
+            <td colspan="6" class="aqua"></td>
+          </tr>
+          <tr>
+            <td colspan="8" class="aqua"></td>
+          </tr>
+        </table>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">&copy; 2026 Раджабов Рагим, гр. 3402, НВГУ</div>
+  </footer>
+
+</body>
+</html>
